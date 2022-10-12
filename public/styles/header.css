@@ -5,7 +5,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
+  /* margin-top: 200px; */
   position: relative;
   color: #fff;
   background:

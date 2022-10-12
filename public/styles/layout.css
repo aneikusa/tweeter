@@ -28,12 +28,6 @@ main {
   background-color: #99c7db;
 }
 
-main .tweet {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .logo {
   font-family: "Bungee";
 }
