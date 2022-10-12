@@ -2,7 +2,7 @@ nav {
   height: 120px;
   width: 100%;
   color: #fff;
-  background-color: #4056a1;
+  background-color: #99c7db;
   padding-left: 1.5em;
   padding-right: 1.5em;
   display: flex;
@@ -32,6 +32,6 @@ nav span {
 .nav-text i {
   display: flex;
   align-items: flex-end;
-  color: lightblue;
+  color: rgb(225, 176, 236);
   margin-top: 5px;
 }

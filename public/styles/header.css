@@ -1,7 +1,6 @@
 header {
   height: 400px;
   width: 100%;
-  background-color: #99c7db;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,5 +8,25 @@ header {
   margin-top: 200px;
   position: relative;
   color: #fff;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  background:
+	  linear-gradient(
+		  rgb(50, 187, 205),
+		  transparent
+	  ),
+	  linear-gradient(
+		  90deg,
+		  rgb(178, 135, 235),
+		  transparent
+	  ),
+	  linear-gradient(
+		  -90deg,
+		  rgb(252, 255, 80),
+		  transparent
+	  );
+
+background-blend-mode: screen;
+}
+
+.user {
+  margin-top: 0;
 }

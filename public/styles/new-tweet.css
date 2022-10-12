@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  box-sizing: 75%;
+  }
+  
+  .hum-text {
+    font-family: "source sans pro";
+    color: gray;
+  }
+  
+  .text-area {
+    background-color: #99c7db;
+    border: none;
+  }
+  
+  
+  .border-area {
+    border-top: 5px solid grey;
+  }
+  
+  .tweet-button {
+    display: flex;
+    background-color: #4056A1;
+    border: none;
+    font-family: "bungee";
+    color: white;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  
+  .counter {
+    display: flex;
+    font-family: "bungee";
+    float: right;
+    align-self: flex-end;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: gray;
+  }

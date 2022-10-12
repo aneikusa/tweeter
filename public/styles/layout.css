@@ -22,13 +22,15 @@ body {
   border-radius: 10px;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  margin-left: 5%;
-  margin-right: 5%;
+main {
+  width: 90%;
+  margin: auto;
   background-color: #99c7db;
-  color: black;
+}
+
+main .tweet {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
