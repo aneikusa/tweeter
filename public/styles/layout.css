@@ -15,10 +15,11 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: #f9f9f9;
+  background-color: #ed9d84;
   font-size: 24px;
   font-family: "Source sans pro";
+  border-radius: 10px;
 }
 
 .logo {
