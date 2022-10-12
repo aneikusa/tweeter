@@ -32,6 +32,6 @@ nav span {
 .nav-text i {
   display: flex;
   align-items: flex-end;
-  color: pink;
+  color: lightblue;
   margin-top: 5px;
 }

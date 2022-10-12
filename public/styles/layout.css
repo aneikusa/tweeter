@@ -16,10 +16,20 @@ html {
 
 body {
   color: #f9f9f9;
-  background-color: #dea7a7;
+  background-color: #99c7db;
   font-size: 24px;
   font-family: "Source sans pro";
   border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #99c7db;
+  color: black;
+  align-items: center;
 }
 
 .logo {
