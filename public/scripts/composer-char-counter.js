@@ -1,19 +1,18 @@
-$(document).ready(function() {
-  console.log("ready!");
+$(document).ready(() => {
+  console.log("DOM loaded");
+});
 
-  $('#tweet-text').on("input", function(e) {
-    const value = e.target.value;
-    console.log(value.length);
-    const maxLength = 140;
-    const calculateLength = maxLength - value.length;
+$("#tweet-text").on("input", function () {
+  // Counter value
+  const counter = $(this).closest("form").find(".counter")[0];
+  counter.value = 140 - this.value.length;
 
-    $("#characters").text(calculateLength);
-    if (calculateLength < 0) {
-      $("#characters").css({
-        "color": "red"
-      })
-    } else {
-      $("#characters").css({ "color": "gray"})
-    }
-  })
+  // Counter color change
+  counter.value < 0
+    ? $(counter).css("color", "red")
+    : $(counter).css("color", "#545149");
+
+  // Resize input area
+  this.style.height = "1px";
+  this.style.height = this.scrollHeight + "px";
 });
