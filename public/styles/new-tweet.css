@@ -73,10 +73,10 @@ article.tweet footer {
 }
   
 .icons {
-  color: #cb9edf;
+  color: gray;
 }
   
 .fas:hover {
-  color: #e8eacc;
+  color: #cb9edf;
   cursor: pointer;
 }
