@@ -5,7 +5,7 @@
  */
 
 // Fake data taken from initial-tweets.json
-const data = [
+const tweetData = [
   {
     "user": {
       "name": "Newton",
@@ -30,16 +30,37 @@ const data = [
   }
 ]
 
+$( document ).ready(function() {
+  renderTweets(tweetData);
+});
+
 const renderTweets = function(tweets) {
-// loops through tweets
-// calls createTweetElement for each tweet
-// takes return value and appends it to the tweets container
+  console.log("TWEETS", tweets)
+  for (const tweet of tweets) {
+    const element = createTweetElement(tweet)
+    $('#tweets-container').append(element);
+  }
 }
 
-const createTweetElement = function(tweet) {
-let $tweet = /* Your code for creating the tweet element */
-// ...
+const createTweetElement = (tweet) => {
+let $tweet =  `<article class="tweet-container">
+  <header>
+    <div class="tweet-user">
+      <img src=${tweet.user.avatars}>
+      <span class="name-of-user"><strong>${tweet.user.name}</strong></span>
+    </div>
+      <span class="user-name"><strong>${tweet.user.handle}</strong></span>
+  </header>
+    <div class="tweet-body">${tweet.content.text}</div>
+  <footer>
+    <div class="icons">
+      <i class="fas fa-flag"></i>
+      <i class="fas fa-retweet"></i>
+      <i class="fas fa-heart"></i>
+    </div>
+  </footer>
+</article>`
 return $tweet;
 }
 
-renderTweets(data);
+// {/* <p>${tweet.created_at}</p> */ UNDERNEATH FOOTER}

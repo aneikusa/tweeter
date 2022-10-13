@@ -2,6 +2,17 @@
   display: flex;
   flex-direction: column;
 }
+
+.tweet-container {
+  border: 4px solid black;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.tweet-container header {
+  display: flex;
+  justify-content: space-between;
+}
   
 .new-tweet footer {
   display: flex;
@@ -11,8 +22,9 @@
 }
   
 .new-tweet button {
-  background-color: #99c7db;
+  background-color: #cb9edf;
   color: #fff;
+  margin-top: 1em;
 }
   
 .new-tweet button:hover {
@@ -24,7 +36,7 @@
 .new-tweet textarea {
   background-color: transparent;
   border: none;
-  border-bottom: 4px gray;
+  border-bottom: 4px black solid;
   resize: none;
   height: 40px;
   margin-top: 1em;
@@ -33,8 +45,6 @@
 .new-tweet textarea:focus {
   outline: none;
 }
-
-
 
 article.tweet {
   border: 4px solid black;
@@ -52,17 +62,18 @@ article.tweet header {
   justify-content: space-between;
 }
   
-  .tweet-user {
-    display: flex;
-  }
+.tweet-user {
+  display: flex;
+}
   
 .tweet-user p {
   margin: 1em;
 }
   
 .tweet-body {
-  margin: 0 1em;
+  margin: 1em;
   border-bottom: 4px #000 solid;
+  padding: inherit;
 }
   
 article.tweet footer {
@@ -74,9 +85,18 @@ article.tweet footer {
   
 .icons {
   color: gray;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1em;
+  padding-inline: 1em;
 }
   
 .fas:hover {
   color: #cb9edf;
   cursor: pointer;
+}
+
+.name-of-user {
+  margin-left: 1em;
+  margin-top: 1em;
 }
