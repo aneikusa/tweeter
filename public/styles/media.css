@@ -1,0 +1,38 @@
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  nav {
+    background-color: #99c7db;
+    background-image: none;
+    position: fixed;
+    height: 120px;
+    font-size: 1.5rem;
+  }
+  nav span {
+    font-size: 2em;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10em 2em 0;
+  }
+
+  .top-header {
+    width: 50%;
+    margin-right: 5em;
+    max-height: 50vh;
+    position: sticky;
+    top: 140px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    font-size: 0.75em;
+  }
+}

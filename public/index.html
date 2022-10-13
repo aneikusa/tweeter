@@ -24,13 +24,15 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/media.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/char-counter.js"></script>
 
     <!-- TIMEAGO -->
     <!-- <script
@@ -43,44 +45,46 @@
   </head>
 
   <body>
+
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span class="logo">tweeter</span>
-      <div class="nav-text">
+      <span>tweeter</span>
+      <a class="nav-btn">
         <p><b>Write</b> a new tweet</p>
         <i class="fas fa-angle-double-down"></i>
-      </div>
+      </a>
     </nav>
+    <div class="container">
+      <header class="top-header">
+        <div>
+          <img src="/images/profile-hex.png" />
+        </div>
+        <div>
+          <h2>Suki!</h2>
+        </div>
+      </header>
 
-    <header class="header">
-      <div class="profile-pic">
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2 class="user">Suki Abdulla</h2>
-      </div>
-  </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <form action="/tweets" method="POST">
-    <textarea
-            name="text"
-            id="tweet-text"
-            placeholder="What are you humming about?"
-            style="height: 50px;"
-          ></textarea>
-          <footer>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text" style="margin-top: 1em;">140</output>
-          </footer>
-          <div class="error"></div>
-        </form>
-      </section>
-      <section id="tweets-container"></section>
-    </main>
-  </script>
+      <!-- Page-specific (main) content here -->
+      <main>
+        <section class="new-tweet">
+          <form action="/tweets" method="POST">
+            <textarea
+              name="text"
+              id="tweet-text"
+              placeholder="What are you humming about?"
+            ></textarea>
+            <footer>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </footer>
+            <div class="error"></div>
+          </form>
+        </section>
+        <section id="tweets-container"></section>
+        <i class="fas fa-angle-double-up"></i>
+      </main>
+    </div>
   </body>
 </html>

@@ -15,11 +15,10 @@ html {
  */
 
 body {
-  color: #f9f9f9;
+  color: #545149;
   background-color: #99c7db;
   font-size: 24px;
-  font-family: "Source sans pro";
-  border-radius: 10px;
+  font-family: Source Sans Pro, sans-serif;
 }
 
 main {
@@ -28,9 +27,24 @@ main {
   background-color: #99c7db;
 }
 
-.logo {
-  font-family: "Bungee";
+.fa-angle-double-up {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  font-size: 40px;
+  color: white;
+  border: 1px rgb(225, 176, 236);
+  border-radius: 100%;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(225, 176, 236);
+  transition: all 0.2s ease-in-out;
+  display: none;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.fa-angle-double-up:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

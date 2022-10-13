@@ -14,4 +14,7 @@ $(document).ready(function() {
         ? $(counter).css("color", "red")
         : $(counter).css("color", "#545149");
     })
+    .focus(() => {
+      $(".error").slideUp("fast");
+    });
 });
