@@ -28,13 +28,13 @@ const tweetData = [
     },
     "created_at": 1665070014923
   }
-]
+];
 
 $(document).ready(function() {
   renderTweets(tweetData);
-  $( ".new-text form" ).submit(function( event ) {
+  $(".new-text form").submit(function(event) {
     event.preventDefault();
-    console.log($(this).serialize())
+    console.log($(this).serialize());
 
     const tweetText = $(this).find("#tweet-text");
     const value = tweetText.val();
@@ -48,31 +48,29 @@ $(document).ready(function() {
       alert("Character count exceeded");
       return false;
     }
-    
+
   });
 
 
-  function loadTweets(){
+  function loadTweets() {
 
-     $.ajax('/tweets', {method: 'GET', dataType: 'JSON'})
-     .then(function (tweetData) {
+    $.ajax('/tweets', {method: 'GET', dataType: 'JSON'})
+      .then(function(tweetData) {
         console.log("success!:", tweetData);
         renderTweets(tweetData);
-  });
-}
+      });
+  }
   loadTweets();
 });
-
 const renderTweets = function(tweets) {
-  console.log("TWEETS", tweets)
+  console.log("TWEETS", tweets);
   for (const tweet of tweets) {
-    const element = createTweetElement(tweet)
+    const element = createTweetElement(tweet);
     $('#tweets-container').append(element);
   }
-}
-
+};
 const createTweetElement = (tweet) => {
-let $tweet =  `<article class="tweet-container">
+  let $tweet =  `<article class="tweet-container">
   <header>
     <div class="tweet-user">
       <img src=${tweet.user.avatars}>
@@ -89,8 +87,6 @@ let $tweet =  `<article class="tweet-container">
       <i class="fas fa-heart"></i>
     </div>
   </footer>
-</article>`
-return $tweet;
-}
-
-// {/* <p>${tweet.created_at}</p> */ UNDERNEATH FOOTER}
+</article>`;
+  return $tweet;
+};
